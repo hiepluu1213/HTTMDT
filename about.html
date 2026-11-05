@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoVintage - Nền tảng TMĐT Đồ Second-hand & Vintage. Mua bán đồ cũ quần áo, sách, đồ Decor với Ví Ký Quỹ Escrow an toàn 48h.">
+  <title>Giới thiệu - EcoVintage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="about">
+
+  <div id="site-header"></div>
+
+  <main class="page-view active" id="page-about">
+    <div class="page-banner-header">
+      <div class="container">
+        <div class="page-breadcrumb">
+          <span style="cursor:pointer;" onclick="navigateTo('home')">Trang Chủ</span> &bull; <span>Giới Thiệu Nền Tảng</span>
+        </div>
+        <h2>Về EcoVintage & Sứ Mệnh Kinh Tế Tuần Hoàn</h2>
+        <p>Hành trình tái sinh những giá trị vượt thời gian, kết nối cộng đồng yêu phong cách sống xanh và văn hóa đồ xưa.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-collage">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Về EcoVintage" class="about-main-img">
+          <div class="about-badge-card">
+            <span class="badge-number">100%</span>
+            <div class="badge-text">Cam kết minh bạch tình trạng đồ cũ và bảo vệ người mua</div>
+          </div>
+        </div>
+
+        <div class="about-content-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Về EcoVintage</span>
+            <button class="btn-outline-white" style="font-size:0.8rem; padding:4px 10px; color:var(--text-main); border-color:var(--border-color);" onclick="openEditAboutModal()" title="Chỉnh sửa nội dung giới thiệu">
+              <i class="fa-solid fa-pen-to-square"></i> Chỉnh sửa văn bản
+            </button>
+          </div>
+
+          <h2 id="about-display-title">Sứ Mệnh Tái Sinh Những Giá Trị Vượt Thời Gian</h2>
+          <p id="about-display-text">
+            EcoVintage ra đời với niềm tin rằng một món đồ cũ không phải là đồ bỏ đi, mà là một tác phẩm đang chờ đợi người tri âm tiếp theo. Chúng tôi xây dựng một hệ sinh thái thương mại điện tử second-hand minh bạch, nơi người mua và người bán kết nối an toàn nhờ cơ chế ví ký quỹ độc lập.
+          </p>
+
+          <div class="mission-pillars">
+            <div class="pillar-item">
+              <i class="fa-solid fa-earth-americas"></i>
+              <div>
+                <h5>Kinh Tế Tuần Hoàn</h5>
+                <p>Kéo dài tuổi thọ sản phẩm, giảm áp lực lên các bãi rác và ngành dệt may.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <i class="fa-solid fa-certificate"></i>
+              <div>
+                <h5>Tuyển Chọn Độc Bản</h5>
+                <p>Mỗi món quần áo, quyển sách hay đồ decor đều có nét độc bản và cá tính riêng.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <i class="fa-solid fa-shield-check"></i>
+              <div>
+                <h5>Tin Cậy Tuyệt Đối</h5>
+                <p>Khách hàng được quyền kiểm tra hàng thực tế 48 giờ trước khi giải ngân.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <i class="fa-solid fa-heart-circle-bolt"></i>
+              <div>
+                <h5>Cộng Đồng Yêu Vintage</h5>
+                <p>Nơi gặp gỡ của những tâm hồn trân trọng cái đẹp hoài cổ và lối sống xanh.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:16px;">
+            <button class="btn-primary" onclick="navigateTo('products')">Ghé thăm Kho Đồ Cũ</button>
+            <button class="btn-outline-white" style="color:var(--text-main); border-color:var(--border-color);" onclick="navigateTo('contact')">Gặp gỡ chúng tôi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/components/modals-shop.js"></script>
+  <script src="js/components/modals-content.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoVintage - Nền tảng TMĐT Đồ Second-hand & Vintage. Mua bán đồ cũ quần áo, sách, đồ Decor với Ví Ký Quỹ Escrow an toàn 48h.">
+  <title>Tin tức & Sự kiện - EcoVintage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="news">
+
+  <div id="site-header"></div>
+
+  <main class="page-view active" id="page-news">
+    <div class="page-banner-header">
+      <div class="container">
+        <div class="page-breadcrumb">
+          <span style="cursor:pointer;" onclick="navigateTo('home')">Trang Chủ</span> &bull; <span>Tin Tức & Sự Kiện</span>
+        </div>
+        <h2>Tin Tức, Kinh Nghiệm Sưu Tầm & Văn Hóa Đồ Xưa</h2>
+        <p>Bố trí theo danh sách hàng dọc sắp xếp từ bài viết mới nhất đến cũ hơn. Bí quyết săn đồ vintage, phân biệt hàng zin và lối sống bền vững.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="news-vertical-list" id="news-vertical-container">
+        <!-- Render động bằng JS -->
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/components/modals-shop.js"></script>
+  <script src="js/components/modals-content.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

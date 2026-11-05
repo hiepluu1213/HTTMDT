@@ -1,0 +1,339 @@
+/* ==========================================================================
+   HERO BANNER SLIDER
+   ========================================================================== */
+.hero-slider-section {
+  position: relative;
+  background: #252822;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  height: 480px;
+}
+
+.slide-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: scale(1.03);
+  display: flex;
+  align-items: center;
+}
+
+.slide-item.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.slide-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.42);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  color: #FFF;
+  max-width: 680px;
+  padding: 40px 0;
+}
+
+.slide-tag {
+  display: inline-block;
+  background: rgba(194, 146, 39, 0.25);
+  border: 1px solid var(--color-gold);
+  color: #FFE699;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 5px 14px;
+  border-radius: var(--border-radius-full);
+  margin-bottom: 16px;
+}
+
+.slide-title {
+  font-size: 3rem;
+  line-height: 1.15;
+  color: #FFF;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.slide-desc {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: #E2DDD5;
+  margin-bottom: 26px;
+}
+
+.slide-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Slider Controls */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 5;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.slider-arrow:hover {
+  background: #FFF;
+  color: var(--color-primary);
+}
+
+.slider-arrow.prev { left: 24px; }
+.slider-arrow.next { right: 24px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.dot {
+  width: 32px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--color-gold);
+  width: 48px;
+}
+
+/* ==========================================================================
+   FEATURE STRIP
+   ========================================================================== */
+.features-strip {
+  background: #FFF;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+}
+
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.feature-box.escrow .feature-icon-wrapper {
+  background: #E8F3ED;
+  color: #284E3A;
+}
+
+.feature-box.eco .feature-icon-wrapper {
+  background: #EBF5FB;
+  color: #2980B9;
+}
+
+.feature-box.delivery .feature-icon-wrapper {
+  background: #FEF5E7;
+  color: #D35400;
+}
+
+.feature-box.quality .feature-icon-wrapper {
+  background: #F4E8D7;
+  color: #9A532C;
+}
+
+.feature-info h4 {
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+}
+
+.feature-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Category Quick Cards on Home */
+.home-cat-strip {
+  padding: 40px 0;
+}
+
+.home-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home-cat-card {
+  position: relative;
+  height: 220px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.home-cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.home-cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+  transition: transform 0.5s ease;
+}
+
+.home-cat-card:hover .home-cat-img {
+  transform: scale(1.08);
+}
+
+.home-cat-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #FFF;
+}
+
+.home-cat-content h3 {
+  color: #FFF;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.home-cat-content span {
+  font-size: 0.85rem;
+  color: #EAE5DC;
+}
+
+/* ==========================================================================
+   VÍ KÝ QUỸ TRUNG GIAN ESCROW (CƠ CHẾ AN TOÀN)
+   ========================================================================== */
+.escrow-section-wrapper {
+  padding: 50px 0;
+}
+
+.escrow-card {
+  background: linear-gradient(135deg, #1C3328 0%, #294F3C 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  color: #FFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.escrow-card::after {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(184, 134, 11, 0.2) 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+}
+
+.escrow-content h3 {
+  font-size: 2rem;
+  color: #FFF;
+  margin-bottom: 12px;
+}
+
+.escrow-steps-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius);
+  padding: 24px;
+}
+
+.escrow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.escrow-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  background: var(--color-gold);
+  color: #1A1A1A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.step-text h5 {
+  color: #FFF;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.step-text p {
+  color: #CFE0D7;
+  font-size: 0.84rem;
+}
+

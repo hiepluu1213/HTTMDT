@@ -1,0 +1,67 @@
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+  .filter-sidebar {
+    position: static;
+  }
+  .about-grid, .contact-grid, .escrow-card, .home-cat-grid, .receipt-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .slide-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    z-index: 500;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .news-card-vertical {
+    grid-template-columns: 1fr;
+  }
+  .news-img-wrap {
+    height: 220px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .slide-title {
+    font-size: 1.8rem;
+  }
+  .slider-container {
+    height: 420px;
+  }
+  .success-order-timeline {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .success-order-timeline::before {
+    display: none;
+  }
+}
+
+

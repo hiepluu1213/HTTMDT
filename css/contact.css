@@ -1,0 +1,99 @@
+/* ==========================================================================
+   CONTACT MODULE (LIÊN HỆ & BẢN ĐỒ)
+   ========================================================================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.contact-form-card {
+  background: #FFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+
+.btn-submit-contact {
+  background: var(--color-primary);
+  color: #FFF;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--border-radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-submit-contact:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Showroom Map & Info */
+.contact-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.showroom-card {
+  background: #F8F4EC;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.showroom-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.showroom-item:last-child {
+  margin-bottom: 0;
+}
+
+.showroom-item i {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.mock-map-box {
+  background: #E5DFD5;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.map-pin-pulse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+}
+
+.map-pin-pulse i {
+  font-size: 2.2rem;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+

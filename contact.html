@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoVintage - Nền tảng TMĐT Đồ Second-hand & Vintage. Mua bán đồ cũ quần áo, sách, đồ Decor với Ví Ký Quỹ Escrow an toàn 48h.">
+  <title>Liên hệ - EcoVintage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact">
+
+  <div id="site-header"></div>
+
+  <main class="page-view active" id="page-contact">
+    <div class="page-banner-header">
+      <div class="container">
+        <div class="page-breadcrumb">
+          <span style="cursor:pointer;" onclick="navigateTo('home')">Trang Chủ</span> &bull; <span>Liên Hệ</span>
+        </div>
+        <h2>Liên Hệ & Trải Nghiệm Showroom Thực Tế</h2>
+        <p>Gửi thông tin góp ý, thắc mắc đơn hàng hoặc ghé thăm không gian trưng bày Vintage Showroom của EcoVintage.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form-card">
+          <h3 style="font-size:1.35rem; margin-bottom:14px; font-family:var(--font-serif);">Gửi thông điệp tới EcoVintage</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">Hệ thống tự động tiếp nhận thông tin và phản hồi qua email của bạn trong vòng 30 phút.</p>
+
+          <form id="contact-form-el" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Họ và tên *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-address">Địa chỉ *</label>
+              <input type="text" id="contact-address" class="form-control" placeholder="Số nhà, phố, quận/huyện, tỉnh/thành phố" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Địa chỉ Email *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="emailcuaban@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Nội dung yêu cầu / Góp ý *</label>
+              <textarea id="contact-message" class="form-control" placeholder="Bạn cần hỗ trợ đơn hàng ký quỹ, thắc mắc sản phẩm hay muốn hợp tác..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-contact">
+              <i class="fa-solid fa-paper-plane"></i> Gửi Thông Tin Liên Hệ
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="showroom-card">
+            <h4 style="font-size:1.15rem; margin-bottom:14px; font-family:var(--font-serif);">EcoVintage Showroom & Hub Ký Quỹ</h4>
+            <div class="showroom-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Địa chỉ Showroom:</strong>
+                <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">Số 45 Phố Tràng Tiền, Quận Hoàn Kiếm, TP. Hà Nội</p>
+              </div>
+            </div>
+            <div class="showroom-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Hotline tư vấn:</strong>
+                <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">1900 888 999 - 0912 345 678</p>
+              </div>
+            </div>
+            <div class="showroom-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Hộp thư hỗ trợ:</strong>
+                <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">contact@ecovintage.vn</p>
+              </div>
+            </div>
+            <div class="showroom-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Giờ mở cửa đón khách:</strong>
+                <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">08:30 - 21:30 (Thứ 2 đến Chủ Nhật)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mock-map-box">
+            <iframe title="Bản đồ showroom" loading="lazy" style="width:100%; height:240px; border:0; border-radius:10px; margin-bottom:12px;" src="https://maps.google.com/maps?q=45+Tr%C3%A0ng+Ti%E1%BB%81n,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i&output=embed"></iframe>
+            <div class="map-pin-pulse">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong style="font-size:1rem; color:var(--color-primary)">BẢN ĐỒ VINTAGE SHOWROOM</strong>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">45 Tràng Tiền, Hoàn Kiếm, Hà Nội (Cách Nhà Hát Lớn 200m)</p>
+              </div>
+              <a href="https://maps.google.com" target="_blank" class="btn-outline-white" style="background:#FFF; color:var(--text-main); margin-top:6px; font-size:0.78rem; border-color:var(--border-color);">
+                <i class="fa-solid fa-diamond-turn-right"></i> Mở chỉ đường Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/components/modals-shop.js"></script>
+  <script src="js/components/modals-content.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

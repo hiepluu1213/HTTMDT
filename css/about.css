@@ -1,0 +1,89 @@
+/* ==========================================================================
+   ABOUT MODULE (GIỚI THIỆU TỔNG QUAN, SỨ MỆNH & QUẢN LÝ)
+   ========================================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.about-img-collage {
+  position: relative;
+}
+
+.about-main-img {
+  width: 90%;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+  height: 420px;
+}
+
+.about-badge-card {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  background: #FFF;
+  padding: 20px 24px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  max-width: 220px;
+  text-align: center;
+}
+
+.badge-number {
+  font-size: 2.2rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.about-content-box h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.about-content-box p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+}
+
+.mission-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 12px;
+}
+
+.pillar-item i {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+
+.pillar-item h5 {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.pillar-item p {
+  font-size: 0.82rem;
+  margin: 0;
+}
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoVintage - Nền tảng TMĐT Đồ Second-hand & Vintage. Mua bán đồ cũ quần áo, sách, đồ Decor với Ví Ký Quỹ Escrow an toàn 48h.">
+  <title>EcoVintage - Nền Tảng TMĐT Đồ Second-hand & Vintage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+
+  <div id="site-header"></div>
+
+  <main class="page-view active" id="page-home">
+    <section class="hero-slider-section">
+      <div class="slider-container">
+        <div class="slide-item active">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1800&q=80" alt="Vintage Clothing" class="slide-bg-img">
+          <div class="container" style="position:relative; z-index:2; height:100%; display:flex; align-items:center;">
+            <div class="slide-content">
+              <span class="slide-tag"><i class="fa-solid fa-recycle"></i> Kinh tế tuần hoàn • Sống xanh</span>
+              <h2 class="slide-title">Mỗi Món Đồ Cũ Mang Một Câu Chuyện Mới</h2>
+              <p class="slide-desc">Nền tảng mua bán đồ Second-hand & Vintage độc bản. Tái sinh quần áo thời trang, sách cũ kinh điển và đồ decor vượt thời gian với cơ chế ví ký quỹ bảo vệ an toàn tuyệt đối.</p>
+              <div class="slide-cta-group">
+                <button class="btn-primary" onclick="navigateTo('products')"><i class="fa-solid fa-compass"></i> Khám Phá Cửa Hàng</button>
+                <button class="btn-outline-white" onclick="openModal('modal-sell-product')"><i class="fa-solid fa-tag"></i> Đăng Bán Lại Đồ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1800&q=80" alt="Vintage Market" class="slide-bg-img">
+          <div class="container" style="position:relative; z-index:2; height:100%; display:flex; align-items:center;">
+            <div class="slide-content">
+              <span class="slide-tag"><i class="fa-solid fa-shield-halved"></i> An Toàn Tuyệt Đối</span>
+              <h2 class="slide-title">Ví Ký Quỹ Escrow: Bảo Vệ Người Mua 48 Giờ</h2>
+              <p class="slide-desc">Mua đồ cũ qua mạng không còn nỗi lo hàng lỗi hay sai mô tả. Tiền được giữ an toàn tại ví trung gian, bạn có 48h cầm nắm kiểm tra trước khi giải ngân cho người bán.</p>
+              <div class="slide-cta-group">
+                <button class="btn-primary" onclick="navigateTo('escrow')"><i class="fa-solid fa-shield-check"></i> Tìm Hiểu Ví Escrow</button>
+                <button class="btn-outline-white" onclick="navigateTo('products')"><i class="fa-solid fa-bag-shopping"></i> Mua Sắm Ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1800&q=80" alt="Vintage Decor" class="slide-bg-img">
+          <div class="container" style="position:relative; z-index:2; height:100%; display:flex; align-items:center;">
+            <div class="slide-content">
+              <span class="slide-tag"><i class="fa-solid fa-gem"></i> Bộ sưu tập Độc Bản</span>
+              <h2 class="slide-title">Không Gian Hoài Niệm Giữa Lòng Hiện Đại</h2>
+              <p class="slide-desc">Tìm lại nét bình yên với những chiếc đèn bàn thân đồng cổ, máy hát đĩa than và những cuốn sách ấn bản thập niên trước được tuyển chọn kỹ càng.</p>
+              <div class="slide-cta-group">
+                <button class="btn-primary" onclick="navigateTo('products', 'decor')"><i class="fa-solid fa-couch"></i> Xem Đồ Decor Xưa</button>
+                <button class="btn-outline-white" onclick="navigateTo('products', 'books')"><i class="fa-solid fa-book"></i> Xem Sách Cũ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow prev" onclick="prevSlide()" aria-label="Slide trước"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-arrow next" onclick="nextSlide()" aria-label="Slide kế tiếp"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="slider-dots">
+          <div class="dot active" onclick="goToSlide(0)"></div>
+          <div class="dot" onclick="goToSlide(1)"></div>
+          <div class="dot" onclick="goToSlide(2)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Strip -->
+    <section class="features-strip">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-box escrow">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Ví Ký Quỹ Escrow An Toàn</h4>
+              <p>Tiền giữ an toàn 48h, chỉ thanh toán khi người mua hài lòng với đồ.</p>
+            </div>
+          </div>
+
+          <div class="feature-box eco">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-recycle"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Kinh Tế Tuần Hoàn</h4>
+              <p>Trao vòng đời thứ 2 cho đồ cũ, giảm thiểu rác thải thời trang.</p>
+            </div>
+          </div>
+
+          <div class="feature-box quality">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Tuyển Chọn Kỹ Càng</h4>
+              <p>Thông tin tình trạng, độ sờn rách và chi tiết minh bạch 100%.</p>
+            </div>
+          </div>
+
+          <div class="feature-box delivery">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Đóng Gói Thân Thiện</h4>
+              <p>Bao bì giấy Kraft mộc mạc tự hủy sinh học bảo vệ môi trường.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lối tắt 3 danh mục lớn trên Trang Chủ -->
+    <section class="home-cat-strip">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Danh Mục Tuyển Chọn</span>
+          <h2 class="section-title">Khám Phá Theo Chủ Đề Đồ Cũ</h2>
+          <p class="section-desc">Chọn ngay danh mục bạn yêu thích để xem các món đồ second-hand độc bản đã được kiểm tra chất lượng kỹ lưỡng.</p>
+        </div>
+
+        <div class="home-cat-grid">
+          <div class="home-cat-card" onclick="navigateTo('products', 'fashion')">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Thời trang Vintage" class="home-cat-img">
+            <div class="home-cat-content">
+              <h3>Thời Trang Vintage</h3>
+              <span>Áo khoác denim, váy hoa nhí, phụ kiện da cổ điển &rarr;</span>
+            </div>
+          </div>
+
+          <div class="home-cat-card" onclick="navigateTo('products', 'books')">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80" alt="Sách cũ & Sưu tầm" class="home-cat-img">
+            <div class="home-cat-content">
+              <h3>Sách Cũ & Sưu Tầm</h3>
+              <span>Văn học kinh điển, triết học, sách hiếm có chữ ký &rarr;</span>
+            </div>
+          </div>
+
+          <div class="home-cat-card" onclick="navigateTo('products', 'decor')">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Đồ Decor & Đồ xưa" class="home-cat-img">
+            <div class="home-cat-content">
+              <h3>Đồ Decor & Đồ Xưa</h3>
+              <span>Đèn bàn bankers, đồng hồ cơ Liên Xô, gốm mộc &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sản phẩm mới đăng gần nhất -->
+    <section style="padding: 40px 0 60px 0; background: #FFF; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:28px;">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> Mới Lên Sàn</span>
+            <h2 style="font-size:1.85rem; margin:4px 0 0 0;">Món Đồ Cũ Mới Về Tuyển Chọn</h2>
+          </div>
+          <button class="btn-primary" onclick="navigateTo('products')">
+            Xem tất cả trong Cửa hàng <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="products-grid" id="home-new-products-grid">
+          <!-- Render 4 sản phẩm mới nhất bằng JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner tóm tắt Ví Ký Quỹ Escrow trên Trang Chủ -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div class="escrow-card">
+          <div class="escrow-content">
+            <span class="section-tag" style="background:rgba(212,175,55,0.2); color:#F0D279;"><i class="fa-solid fa-shield-halved"></i> Cơ Chế Độc Bản</span>
+            <h3>Bảo Vệ Người Dùng Tuyệt Đối Với Ví Ký Quỹ Escrow</h3>
+            <p style="color:#CFE0D7; margin-bottom:20px; font-size:1.02rem;">
+              Không còn rủi ro "treo đầu dê bán thịt chó". Mọi đơn hàng tại EcoVintage đều được bảo vệ bởi cơ chế giữ tiền độc lập 48 giờ.
+            </p>
+            <button class="btn-primary" style="background:var(--color-gold); color:#1A1A1A;" onclick="navigateTo('escrow')">
+              <i class="fa-solid fa-shield-check"></i> Khám phá quy trình Ví Escrow
+            </button>
+          </div>
+          <div class="escrow-steps-box">
+            <div class="escrow-step">
+              <span class="step-num">1</span>
+              <div class="step-text">
+                <h5>Tiền được khóa trong ví trung gian an toàn</h5>
+                <p>Người bán không thể rút tiền ngay sau khi người mua đặt cọc.</p>
+              </div>
+            </div>
+            <div class="escrow-step">
+              <span class="step-num">2</span>
+              <div class="step-text">
+                <h5>48 Giờ thẩm định chất lượng thực tế</h5>
+                <p>Khách hàng nhận kiện hàng, kiểm tra độ sờn và thử đồ thoải mái.</p>
+              </div>
+            </div>
+            <div class="escrow-step">
+              <span class="step-num">3</span>
+              <div class="step-text">
+                <h5>Hài lòng mới giải ngân, sai mô tả hoàn 100%</h5>
+                <p>Đảm bảo quyền lợi công bằng tối thượng cho cả người mua và người bán.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-modals"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/components/modals-shop.js"></script>
+  <script src="js/components/modals-content.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

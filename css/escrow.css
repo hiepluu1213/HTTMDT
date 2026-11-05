@@ -1,0 +1,12 @@
+/* ===== ESCROW ORDERS ===== */
+.escrow-order { border:1px solid var(--border-color); border-radius:12px; padding:16px; margin-bottom:14px; background:#FFFDF8; }
+.escrow-order-head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
+.escrow-status { padding:3px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; }
+.escrow-status.holding { background:#FFF3CD; color:#7A5E00; }
+.escrow-status.released { background:#D4EDDA; color:#1C653B; }
+.escrow-status.refunded { background:#F8D7DA; color:#78261F; }
+.escrow-steps { display:flex; gap:6px; margin:10px 0; font-size:0.75rem; }
+.escrow-steps span { flex:1; text-align:center; padding:6px 4px; border-radius:6px; background:#EEE; color:#888; }
+.escrow-steps span.done { background:#D4EDDA; color:#1C653B; font-weight:600; }
+.escrow-steps span.now { background:#FFF3CD; color:#7A5E00; font-weight:600; }
+
